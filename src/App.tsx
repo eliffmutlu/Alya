@@ -118,12 +118,6 @@ function App() {
                 <a href="#" className="text-white hover:text-blue-200 transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="text-white hover:text-blue-200 transition-colors">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-white hover:text-blue-200 transition-colors">
-                  <Youtube className="w-6 h-6" />
-                </a>
               </div>
             </div>
 
@@ -147,22 +141,12 @@ function App() {
               <ul className="space-y-3">
                 <li>
                   <Link to="/hizmetler" className="text-blue-100 hover:text-white transition-colors">
-                    Web Tasarım
+                    Organizasyon Hizmetleri
                   </Link>
                 </li>
                 <li>
                   <Link to="/hizmetler" className="text-blue-100 hover:text-white transition-colors">
-                    Grafik Tasarım
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/hizmetler" className="text-blue-100 hover:text-white transition-colors">
-                    Dijital Pazarlama
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/hizmetler" className="text-blue-100 hover:text-white transition-colors">
-                    Sosyal Medya Yönetimi
+                    Ajans Hizmetleri
                   </Link>
                 </li>
               </ul>
@@ -180,16 +164,9 @@ function App() {
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-blue-200" />
-                  <a href="tel:+905551234567" className="text-blue-100 hover:text-white transition-colors">
-                    +90 (555) 123 45 67
+                  <a href="tel:+905387193914" className="text-blue-100 hover:text-white transition-colors">
+                    +90 538 719 39 14
                   </a>
-                </li>
-                <li className="flex items-start">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-200 mt-1" />
-                  <span className="text-blue-100">
-                    Merkez Mah. Atatürk Cad. No:123<br />
-                    34000 İstanbul, Türkiye
-                  </span>
                 </li>
               </ul>
             </div>

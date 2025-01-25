@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronRight, X } from 'lucide-react';
 
 export default function GalleryPage() {
@@ -79,18 +79,6 @@ export default function GalleryPage() {
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold text-blue-900 mb-4">Galeri</h2>
           <p className="text-blue-600">Başarıyla tamamladığımız projelerden örnekler</p>
-        </div>
-        
-        {/* Proje Filtreleme */}
-        <div className="flex flex-wrap gap-4 justify-center mb-12">
-          {['Tümü', 'Web Tasarım', 'Mobil', 'Grafik Tasarım', 'Video'].map((filter, i) => (
-            <button
-              key={i}
-              className="px-6 py-2 rounded-full border-2 border-blue-200 text-blue-600 hover:bg-blue-50 transition-all"
-            >
-              {filter}
-            </button>
-          ))}
         </div>
         
         {/* Proje Grid */}

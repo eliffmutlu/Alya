@@ -3,6 +3,12 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      spacing: {
+        '128': '32rem', // 128 = 32rem (512px)
+        '144': '36rem', // 144 = 36rem (576px)
+        '160': '40rem', // 640px
+        '192': '48rem', // 768px
+      },
       fontFamily: {
         serif: ['Playfair Display', 'serif'],
       },

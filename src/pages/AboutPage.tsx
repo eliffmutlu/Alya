@@ -21,8 +21,7 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-blue-900">Misyonumuz</h3>
                 </div>
                 <p className="text-blue-700 leading-relaxed">
-                  Müşterilerimizin dijital varlıklarını en üst seviyeye taşımak ve markalarını geleceğe hazırlamak için yenilikçi çözümler sunmak. Her projede en yüksek kalite standartlarını koruyarak, müşteri memnuniyetini ön planda tutuyoruz. Teknoloji ve yaratıcılığı harmanlayarak, her müşterimizin benzersiz ihtiyaçlarına özel çözümler üretiyoruz.
-                </p>
+                Alya Ajans olarak, müşterilerimizin hayallerini gerçeğe dönüştürmek için yaratıcı, yenilikçi ve profesyonel çözümler sunuyoruz. Eğitimden kültürel etkinliklere, kurumsal kimlik çalışmalarından dijital çözümlere kadar geniş bir hizmet yelpazesiyle markaların vizyonunu güçlendirmeyi ve topluma değer katmayı amaçlıyoruz. Müşteri memnuniyetini öncelik alarak, her projede mükemmelliği hedefliyoruz.                </p>
               </div>
               
               <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-lg transform hover:-translate-y-2 transition-all">
@@ -31,8 +30,7 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-blue-900">Vizyonumuz</h3>
                 </div>
                 <p className="text-blue-700 leading-relaxed">
-                  Dijital dünyada öncü ve yenilikçi çözümlerle, global ölçekte tanınan ve güvenilen bir ajans olmak. Teknoloji ve yaratıcılığı harmanlayarak, sektörde standartları belirleyen bir konuma ulaşmak. Sürekli gelişen teknoloji dünyasında, her zaman bir adım önde olmak ve müşterilerimize en yenilikçi çözümleri sunmak için çalışıyoruz.
-                </p>
+                Alya Ajans, organizasyon ve dijital çözümler alanında Türkiye’nin önde gelen markalarından biri olmayı hedeflemektedir. Teknolojiyi yaratıcı düşünceyle birleştirerek, ulusal ve uluslararası arenada fark yaratan projeler geliştirmek ve müşteri odaklı bir hizmet anlayışıyla sektör lideri olmak vizyonumuzdur. İnovasyon ve sürdürülebilirlik ilkeleri doğrultusunda, iş ortaklarımızın başarısını destekleyen ve topluma katkı sağlayan projelerle geleceği şekillendirmeyi arzuluyoruz.                </p>
               </div>
             </div>
             
@@ -146,54 +144,6 @@ export default function AboutPage() {
                 <value.icon className="w-12 h-12 text-blue-600 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-blue-900 mb-4">{value.title}</h3>
                 <p className="text-blue-700">{value.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Ekibimiz */}
-      <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-900 mb-4">Ekibimiz</h2>
-            <p className="text-blue-600">Başarımızın Arkasındaki Güç</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                name: 'Ali Yılmaz',
-                role: 'Kurucu & CEO',
-                image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80'
-              },
-              {
-                name: 'Zeynep Kaya',
-                role: 'Kreatif Direktör',
-                image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80'
-              },
-              {
-                name: 'Mehmet Demir',
-                role: 'Teknik Direktör',
-                image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80'
-              },
-              {
-                name: 'Ayşe Yıldız',
-                role: 'Proje Yöneticisi',
-                image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80'
-              }
-            ].map((member, i) => (
-              <div key={i} className="text-center">
-                <div className="relative mb-6 group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform"></div>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="relative w-full h-64 object-cover rounded-2xl"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-2">{member.name}</h3>
-                <p className="text-blue-600">{member.role}</p>
               </div>
             ))}
           </div>
