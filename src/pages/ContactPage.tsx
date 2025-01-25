@@ -16,7 +16,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center space-x-4">
                 <MessageSquare className="text-blue-600" />
-                <span className="text-blue-800">+90 (555) 123 45 67</span>
+                <span className="text-blue-800">+90 538 719 39 14</span>
               </div>
             </div>
           </div>
