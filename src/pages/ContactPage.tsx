@@ -1,46 +1,37 @@
 
-import { Users, MessageSquare } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <section className="py-32 bg-gradient-to-b from-white to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section className="py-32 bg-gradient-to-b from-white via-white to-[#0264E4]">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-bold text-blue-900 mb-8">Bizimle İletişime Geçin</h2>
             <p className="text-blue-700 mb-8">Projenizi birlikte hayata geçirelim.</p>
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <Users className="text-blue-600" />
-                <span className="text-blue-800">info@alyaajans.com</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <MessageSquare className="text-blue-600" />
-                <span className="text-blue-800">+90 538 719 39 14</span>
-              </div>
-            </div>
+            <ul className="space-y-4">
+                <li className="flex items-center">
+                  <Mail className="w-5 h-5 mr-3 text-blue-800" />
+                  <a href="mailto:info@alyaajans.com" className="text-blue-600 hover:text-white transition-colors">
+                    info@alyaajans.com
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <Phone className="w-5 h-5 mr-3 text-blue-800" />
+                  <a href="tel:+905387193914" className="text-blue-600 hover:text-white transition-colors">
+                    +90 538 719 39 14
+                  </a>
+                </li>
+              </ul>
           </div>
           
-          <form className="space-y-6">
-            <input
-              type="text"
-              placeholder="Adınız"
-              className="w-full px-6 py-4 rounded-lg bg-white text-blue-900 border border-blue-200 focus:border-blue-400 outline-none shadow-md transition-all hover:shadow-lg"
-            />
-            <input
-              type="email"
-              placeholder="E-posta Adresiniz"
-              className="w-full px-6 py-4 rounded-lg bg-white text-blue-900 border border-blue-200 focus:border-blue-400 outline-none shadow-md transition-all hover:shadow-lg"
-            />
-            <textarea
-              placeholder="Mesajınız"
-              rows={4}
-              className="w-full px-6 py-4 rounded-lg bg-white text-blue-900 border border-blue-200 focus:border-blue-400 outline-none shadow-md transition-all hover:shadow-lg"
-            ></textarea>
-            <button className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg transition-all transform hover:scale-105 shadow-lg">
-              Gönder
-            </button>
-          </form>
+          <div className="flex-shrink-0">
+        <img
+          src="/logo4.svg" // Logo dosya yolunu burada belirtebilirsiniz
+          alt="Alya Logo"
+          className="h-128 w-128 object-contain" // Logonun boyutunu ayarladım
+        />
+      </div>
         </div>
       </div>
     </section>

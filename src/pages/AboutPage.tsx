@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Ana Hakkımızda Bölümü */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-blue-900 mb-4">Hakkımızda</h2>
@@ -150,7 +150,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Sertifikalar ve Başarılar */}
+      {/* Sertifikalar ve Başarılar
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -182,7 +182,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+       */}
       {/* CTA Bölümü */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

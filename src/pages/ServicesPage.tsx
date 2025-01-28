@@ -341,7 +341,7 @@ export default function ServicesPage() {
 
   return (
     <>
-          <section className="py-32 bg-gradient-to-br from-[#ffffff] via-[#5CBBDF] to-[#0264E4] relative overflow-hidden">
+          <section className="py-32 bg-gradient-to-br from-[#ffffff]  to-[#0264E4] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-blue-900 mb-4">Hizmetlerimiz</h2>
@@ -350,7 +350,7 @@ export default function ServicesPage() {
 
           {/* Organizasyon Hizmetleri */}
           <div className="mb-20">
-            <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">Organizasyon Hizmetleri</h3>
+            <h3 className="text-2xl font-bold text-blue-600 mb-8 text-center">Organizasyon Hizmetleri</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.organization.map((service, index) => (
                 <div
@@ -376,7 +376,7 @@ export default function ServicesPage() {
 
           {/* Ajans Hizmetleri */}
           <div>
-            <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">Ajans Hizmetleri</h3>
+            <h3 className="text-2xl font-bold text-blue-600 mb-8 text-center">Ajans Hizmetleri</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.agency.map((service, index) => (
                 <div
