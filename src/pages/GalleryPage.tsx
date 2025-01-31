@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { ChevronRight, X } from 'lucide-react';
 
 export default function GalleryPage() {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [, setSelectedProject] = useState<number | null>(null);
 
   const projects = [
     {
@@ -98,17 +97,17 @@ export default function GalleryPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-blue-200 mb-4">{project.desc}</p>
-                  <div className="flex items-center text-white">
+                  {/*<div className="flex items-center text-white">
                     <span>Detayları Gör</span>
                     <ChevronRight className="ml-2" />
-                  </div>
+                  </div>*/}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Proje Detay Modal */}
+        {/* Proje Detay Modal 
         {selectedProject !== null && (
           <div className="fixed inset-0 bg-blue-900/90 flex items-center justify-center z-50 p-4">
             <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -176,7 +175,7 @@ export default function GalleryPage() {
               </div>
             </div>
           </div>
-        )}
+        )}*/}
       </div>
     </section>
   );

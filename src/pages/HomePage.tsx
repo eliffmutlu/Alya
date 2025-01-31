@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronRight, Globe, Code, Sparkles, ArrowRight, Target, Heart, Instagram, Rocket} from 'lucide-react';
+import { ChevronRight, Globe, Code, Sparkles, ArrowRight, Target, Instagram, Rocket} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HomePage() {
@@ -59,19 +59,19 @@ export default function HomePage() {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="space-y-8">
           <div className="overflow-visible">
-          <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none animate-fade-in font-serif tracking-tight mb-4 flex items-center space-x-16">
+          <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none animate-fade-in font-serif tracking-tight mb-4 flex items-center space-x-4 sm:space-x-8 md:space-x-12 lg:space-x-16">
             {/* Alya Görseli */}
             <img 
               src="/bannerBaslikBeyaz.svg" 
               alt="Alya Logo" 
-              className="h-4 sm:h-12 md:h-12 lg:h-16 w-auto animate-pulse"
+              className="h-8 sm:h-12 md:h-12 lg:h-16 w-auto animate-pulse"
             />
 
             {/* Ajans Görseli */}
             <img 
               src="/bannerBaslikMavi.svg" 
               alt="Ajans Logo" 
-              className="h-4 sm:h-12 md:h-12 lg:h-16 w-auto animate-pulse"
+              className="h-8 sm:h-12 md:h-12 lg:h-16 w-auto animate-pulse"
             />
           </div>
 
@@ -101,42 +101,43 @@ export default function HomePage() {
         </div>
       </section>
 
+     {/* Alya Ajans İle Tanışın */}
+      <div className="flex flex-col sm:flex-row items-center justify-between bg-blue-50 p-6 sm:p-10 rounded-lg shadow-lg h-auto sm:h-192">
+        {/* Logo (Telefon ekranlarında gizleniyor) */}
+        <div className="flex-shrink-0 hidden sm:block">
+          <img
+            src="/logo3.svg"
+            alt="Alya Logo"
+            className="h-32 sm:h-128 w-auto object-contain"
+          />
+        </div>
 
-      {/* Kimiz? */}
-      <div className="flex items-center justify-between bg-blue-50 p-10 rounded-lg shadow-lg h-192">
-      {/* Logo */}
-      <div className="flex-shrink-0">
-        <img
-          src="/logo3.svg" // Logo dosya yolunu burada belirtebilirsiniz
-          alt="Alya Logo"
-          className="h-128 w-128 object-contain" // Logonun boyutunu ayarladım
-        />
+        {/* Metinler */}
+        <div className="text-blue-900 flex-grow text-left space-y-6">
+          <h1 className="text-2xl sm:text-3xl font-bold">Alya Ajans ile Tanışın</h1>
+          <h2 className="text-lg sm:text-xl font-semibold text-blue-700">
+            Yaratıcı Çözümler, Profesyonel Hizmetler
+          </h2>
+          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+            Alya Ajans, markanızın potansiyelini ortaya çıkarmak ve unutulmaz
+            organizasyonlar yaratmak için çalışan yaratıcı bir ekiptir.
+            Manisa merkezli ajansımız, fotoğraf & video çekimlerinden dijital
+            pazarlamaya kadar geniş bir hizmet yelpazesi sunar.
+          </p>
+          <h3 className="text-xl sm:text-2xl font-semibold">Detaylara Önem Veriyoruz</h3>
+          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+            Müşteri odaklı yaklaşımımızla, sizi dinler ve ihtiyaçlarınıza özel
+            çözümler geliştiririz.
+          </p>
+          <h3 className="text-xl sm:text-2xl font-semibold">Sizin İçin Buradayız</h3>
+          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+            Alya Ajans, sadece bir hizmet sağlayıcı değil, aynı zamanda bir çözüm
+            ortağıdır.
+          </p>
+        </div>
       </div>
 
-      {/* Metinler */}
-      <div className="text-blue-900 ml-10 flex-grow">
-        <h1 className="text-3xl font-bold mb-4">Alya Ajans ile Tanışın</h1>
-        <h2 className="text-lg font-semibold text-blue-700 mb-6">
-          Yaratıcı Çözümler, Profesyonel Hizmetler
-        </h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          Alya Ajans, markanızın potansiyelini ortaya çıkarmak ve unutulmaz
-          organizasyonlar yaratmak için çalışan yaratıcı bir ekiptir.
-          Manisa merkezli ajansımız, fotoğraf & video çekimlerinden dijital
-          pazarlamaya kadar geniş bir hizmet yelpazesi sunar.
-        </p>
-        <h3 className="text-2xl font-semibold mb-4">Detaylara Önem Veriyoruz</h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          Müşteri odaklı yaklaşımımızla, sizi dinler ve ihtiyaçlarınıza özel
-          çözümler geliştiririz.
-        </p>
-        <h3 className="text-2xl font-semibold mb-4">Sizin İçin Buradayız</h3>
-        <p className="text-gray-700 leading-relaxed">
-          Alya Ajans, sadece bir hizmet sağlayıcı değil, aynı zamanda bir çözüm
-          ortağıdır.
-        </p>
-      </div>
-    </div>
+
       {/* Öne Çıkan Başarılar
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -282,7 +283,7 @@ export default function HomePage() {
 
 
 
-    {/* Referanslar */}
+    {/* Referanslar 
 <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
@@ -323,6 +324,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+*/}
 
 {/* Instagram Bölümü */}
 <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
@@ -332,9 +334,9 @@ export default function HomePage() {
             <p className="text-blue-600"> Sosyal Medyada Bize Katılın</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 items-start">
+          <div className="grid md:grid-cols-1 gap-8 items-center justify-center">
             {/* Instagram Profil Kartı */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center mx-auto">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center transform hover:scale-110 transition-transform">
                 <Instagram className="w-10 h-10 text-white" />
               </div>
@@ -351,7 +353,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Son Paylaşımlar */}
+            {/* Son Paylaşımlar 
             {[1, 2, 3].map((post, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl shadow-lg aspect-square">
                 <img
@@ -369,7 +371,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-            ))}
+            ))}*/}
           </div>
         </div>
       </section>

@@ -25,7 +25,7 @@ export default function ContactPage() {
               </ul>
           </div>
           
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 hidden sm:block">
         <img
           src="/logo4.svg" // Logo dosya yolunu burada belirtebilirsiniz
           alt="Alya Logo"
