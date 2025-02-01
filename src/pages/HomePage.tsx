@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronRight, Globe, Code, Sparkles, ArrowRight, Target, Instagram, Rocket} from 'lucide-react';
+import { ChevronRight, Globe, Code, Sparkles, ArrowRight, Target, Instagram, Facebook, Rocket} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HomePage() {
@@ -334,7 +334,7 @@ export default function HomePage() {
             <p className="text-blue-600"> Sosyal Medyada Bize Katılın</p>
           </div>
 
-          <div className="grid md:grid-cols-1 gap-8 items-center justify-center">
+          <div className="grid md:grid-cols-2 items-center justify-center">
             {/* Instagram Profil Kartı */}
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center mx-auto">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center transform hover:scale-110 transition-transform">
@@ -347,6 +347,23 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-full hover:from-purple-700 hover:to-pink-600 transition-all transform hover:scale-105"
+              >
+                <span>Takip Et</span>
+                <ChevronRight className="ml-2 w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center mx-auto">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-tr from-blue-600 to-blue-500 flex items-center justify-center transform hover:scale-110 transition-transform">
+                <Facebook className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 mb-2">@alyaajansmanisa</h3>
+              <p className="text-blue-600 mb-4">Alya Ajans</p>
+              <a
+                href="https://www.facebook.com/alyajansmanisa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full hover:from-blue-700 hover:to-blue-600 transition-all transform hover:scale-105"
               >
                 <span>Takip Et</span>
                 <ChevronRight className="ml-2 w-4 h-4" />
