@@ -7,8 +7,8 @@ export default function GalleryPage() {
 
   const projects = [
     {
-      headerImage: ["public/galeri1.svg"],
-      images: ["/public/galeri1-1.svg", "/public/galeri1-2.svg", "/public/galeri1-3.svg", "/public/galeri1-4.svg"],
+      headerImage: ["galeri1.svg"],
+      images: ["galeri1-1.svg", "galeri1-2.svg", "galeri1-3.svg", "galeri1-4.svg"],
       title: "Promosyon Ürünler",
       desc: "Manisa Enerji",
       client: "Alya Ajans olarak, Manisa Enerji’nin marka kimliğini güçlendirmek adına özgün ve dikkat çekici promosyon ürün tasarımlarını hayata geçirdik.",
