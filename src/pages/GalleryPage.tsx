@@ -1,76 +1,29 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function GalleryPage() {
-  const [, setSelectedProject] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [currentImage, setCurrentImage] = useState(0);
 
   const projects = [
     {
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "E-ticaret Projesi",
-      desc: "Modern ve kullanıcı dostu e-ticaret sitesi",
-      client: "TechStore",
-      year: "2023",
-      services: ["Web Tasarım", "E-ticaret", "SEO"],
-      challenge: "Büyük ürün kataloğunun yönetimi ve hızlı arama fonksiyonu",
-      solution: "Özel filtreleme sistemi ve gelişmiş arama algoritması",
-      result: "Satışlarda %150 artış, bounce rate'de %40 düşüş"
+      headerImage: ["public/galeri1.svg"],
+      images: ["public/galeri1-1.svg", "public/galeri1-2.svg", "public/galeri1-3.svg", "public/galeri1-4.svg"],
+      title: "Promosyon Ürünler",
+      desc: "Manisa Enerji",
+      client: "Alya Ajans olarak, Manisa Enerji’nin marka kimliğini güçlendirmek adına özgün ve dikkat çekici promosyon ürün tasarımlarını hayata geçirdik.",
+      year: "Manisa Enerji’nin isteği doğrultusunda, Manisa’ya özgü bir promosyon teması oluşturarak çanta, defter, kalem, üzüm ve Manisa macunu gibi ürünler tasarladık. Bu özel tasarımlar, firmanın vizyonunu yansıtıp marka bilinirliğini artırıyor.",
+      result: "Müşteri taleplerine göre geniş bir ürün yelpazesi sunarak tasarımlarınızı özenle hazırlıyor, en kaliteli sonuçları sunuyoruz!"
     },
-    {
-      img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "Kurumsal Website",
-      desc: "Profesyonel şirket web sitesi",
-      client: "InnovaCorp",
-      year: "2023",
-      services: ["Web Tasarım", "Kurumsal Kimlik", "İçerik Yönetimi"],
-      challenge: "Global pazarda marka kimliğini yansıtma",
-      solution: "Çok dilli içerik yönetimi ve lokalizasyon",
-      result: "Global müşteri portföyünde %80 artış"
-    },
-    {
-      img: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "Mobil Uygulama",
-      desc: "iOS ve Android için özel uygulama",
-      client: "HealthApp",
-      year: "2023",
-      services: ["Mobil Uygulama", "UI/UX Tasarım", "Backend Geliştirme"],
-      challenge: "Karmaşık sağlık verilerinin kullanıcı dostu sunumu",
-      solution: "Özelleştirilebilir dashboard ve veri görselleştirme",
-      result: "App Store'da 4.8 yıldız değerlendirme"
-    },
-    {
-      img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "Digital Marketing",
-      desc: "Sosyal medya ve SEO kampanyası",
-      client: "FashionBrand",
-      year: "2023",
-      services: ["Dijital Pazarlama", "Sosyal Medya", "SEO"],
-      challenge: "Yüksek rekabetli pazarda marka bilinirliği",
-      solution: "Influencer marketing ve içerik stratejisi",
-      result: "Sosyal medya takipçilerinde %200 artış"
-    },
-    {
-      img: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "Marka Kimliği",
-      desc: "Logo ve kurumsal kimlik tasarımı",
-      client: "EcoLife",
-      year: "2023",
-      services: ["Marka Kimliği", "Grafik Tasarım", "Ambalaj Tasarımı"],
-      challenge: "Sürdürülebilirlik mesajının görsel aktarımı",
-      solution: "Eco-friendly malzemeler ve minimal tasarım",
-      result: "Sektörde trend belirleyici konuma ulaşma"
-    },
-    {
-      img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      title: "Video Prodüksiyon",
-      desc: "Kurumsal tanıtım filmi",
-      client: "TechCorp",
-      year: "2023",
-      services: ["Video Prodüksiyon", "3D Animasyon", "Ses Tasarımı"],
-      challenge: "Kompleks teknolojinin anlaşılır sunumu",
-      solution: "3D animasyon ve interaktif anlatım",
-      result: "1M+ organik video görüntülenme"
-    }
   ];
+
+  const handlePrev = () => {
+    setCurrentImage((prev) => (prev === 0 ? projects[selectedProject as number].images.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentImage((prev) => (prev === projects[selectedProject as number].images.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <section className="py-32 bg-white">
@@ -89,7 +42,7 @@ export default function GalleryPage() {
               onClick={() => setSelectedProject(i)}
             >
               <img
-                src={project.img}
+                src={project.headerImage[0]}
                 alt={project.title}
                 className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
@@ -97,85 +50,77 @@ export default function GalleryPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-blue-200 mb-4">{project.desc}</p>
-                  {/*<div className="flex items-center text-white">
+                  <div className="flex items-center text-white">
                     <span>Detayları Gör</span>
                     <ChevronRight className="ml-2" />
-                  </div>*/}
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Proje Detay Modal 
         {selectedProject !== null && (
           <div className="fixed inset-0 bg-blue-900/90 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-              <div className="relative">
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 text-blue-600 hover:text-blue-800"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-                
+            <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+              <button onClick={() => setSelectedProject(null)} className="absolute top-4 right-4 text-blue-600 hover:text-blue-800 z-50"
+              >
+                <X className="w-6 h-6 text-blue-600" />
+              </button>
+
+              <div className="relative w-full h-80">
                 <img
-                  src={projects[selectedProject].img}
-                  alt={projects[selectedProject].title}
-                  className="w-full h-80 object-cover rounded-t-2xl"
+                  src={projects[selectedProject as number].images[currentImage]}
+                  alt={`Project Image ${currentImage + 1}`}
+                  className="w-full h-full object-cover rounded-t-2xl"
                 />
-                
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4">
-                    {projects[selectedProject].title}
-                  </h3>
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-blue-900 mb-2">Müşteri</h4>
-                        <p className="text-blue-700">{projects[selectedProject].client}</p>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-blue-900 mb-2">Yıl</h4>
-                        <p className="text-blue-700">{projects[selectedProject].year}</p>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-blue-900 mb-2">Hizmetler</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {projects[selectedProject].services.map((service, i) => (
-                            <span key={i} className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
-                              {service}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+
+                <button
+                  onClick={handlePrev}
+                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 p-2 rounded-full hover:bg-white"
+                >
+                  <ChevronLeft className="w-6 h-6 text-blue-600" />
+                </button>
+
+                <button
+                  onClick={handleNext}
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 p-2 rounded-full hover:bg-white"
+                >
+                  <ChevronRight className="w-6 h-6 text-blue-600" />
+                </button>
+              </div>
+
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-blue-900 mb-4">{projects[selectedProject as number].title}</h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-blue-900 mb-2">Güçlü Marka Kimliği</h4>
+                      <p className="text-blue-700">{projects[selectedProject as number].client}</p>
                     </div>
-                    
-                    <div>
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-blue-900 mb-2">Zorluk</h4>
-                        <p className="text-blue-700">{projects[selectedProject].challenge}</p>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-blue-900 mb-2">Çözüm</h4>
-                        <p className="text-blue-700">{projects[selectedProject].solution}</p>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-blue-900 mb-2">Sonuç</h4>
-                        <p className="text-blue-700">{projects[selectedProject].result}</p>
-                      </div>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-blue-900 mb-2">Vizyon ve Değerler</h4>
+                      <p className="text-blue-700">{projects[selectedProject as number].year}</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-blue-900 mb-2">🎯 Siz de Markanızı Öne Çıkarın!</h4>
+                      <ul className="pl-6 ml-8;" style={{ listStyleType: "circle" }}>
+                          <li className="text-blue-700 mb-2">Hedef kitlenize etkili bir şekilde ulaşmak,</li>
+                          <li className="text-blue-700 mb-2">Çalışan motivasyonunu artırmak,</li>
+                          <li className="text-blue-700 mb-2">Markanızı akılda kalıcı hale getirmek için promosyon ürünlerinizi bizimle hayata geçirin.</li>
+                      </ul>
+                    </div>
+                    <div className="mb-6">
+                      <p className="font-semibold text-blue-900 mb-2">{projects[selectedProject as number].result}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        )}*/}
+        )}
       </div>
     </section>
   );

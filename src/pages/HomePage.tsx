@@ -336,7 +336,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 items-center justify-center">
             {/* Instagram Profil Kartı */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center mx-auto mb-6 sm:mb-10">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center transform hover:scale-110 transition-transform">
                 <Instagram className="w-10 h-10 text-white" />
               </div>
@@ -353,6 +353,7 @@ export default function HomePage() {
               </a>
             </div>
 
+            {/* Facebook Profil Kartı */}
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center mx-auto">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-tr from-blue-600 to-blue-500 flex items-center justify-center transform hover:scale-110 transition-transform">
                 <Facebook className="w-10 h-10 text-white" />
